@@ -35,8 +35,8 @@ jobs:
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
         with:
-          aws_access_key:  "AKIAY2JEE6A6PTKLWSGK" 
-          aws_secret_key: "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"
+          aws_access_key:  ${{ secrets.AWS_ACCESS_KEY_ID }} 
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: Allianz
           environment_name: Allianz-env
           version_label: 12345
